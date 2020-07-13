@@ -1,0 +1,116 @@
+html {
+  font-size: 10px;
+  background-color: #4e505a;
+  font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+section {
+  transform: scale(0.75);
+}
+
+.sub {
+  transform: translateY(2.5rem);
+  color: #34343b;
+  font-size: 2.75rem;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  font-size: 28rem;
+  color: #34343b;
+  transition: transform 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.drum {
+  transform: scale(1.35);
+  filter: blur(1px)
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+}
+
+.key {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  text-transform: lowercase;
+  font-weight: bold;
+  margin: 0 2.5rem;
+  background-color: #4e505a;
+  width: 8rem;
+  min-width: 8rem;
+  height: 8rem;
+  min-height: 8rem;
+  border-radius: 50%;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3),
+    -7px -7px 15px rgba(255, 255, 255, 0.2),
+    inset 0px 0px 4px rgba(0, 0, 0, 0.1),
+    inset 7px 7px 15px rgba(255, 255, 255, 0.1),
+    inset -7px -7px 15px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.key kbd, .key span {
+  pointer-events: none;
+}
+
+.playing {
+  transform: translateY(1px);
+  background-color: #4e505a;
+  box-shadow: inset -7px -7px 7px rgb(255, 255, 255, 0.1),
+    inset -1px -1px 1px rgb(255, 255, 255, 0.1),
+    inset 3px 3px 3px rgb(0, 0, 0, 0.2), inset 7px 7px 30px rgba(0, 0, 0, 0.3),
+    inset -7px -7px 15px rgba(255, 255, 255, 0.1),
+    0 0 4px rgba(255, 255, 255, 0.2), 7px 7px 15px rgba(0, 0, 0, 0.3),
+    -7px -7px 15px rgba(255, 255, 255, 0.2);
+}
+
+.playing > kbd {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+kbd {
+  font-family: 'Poppins';
+  font-weight: lighter;
+  font-size: 2rem;
+  color: white;
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+
+.sound {
+  font-size: 1.75rem;
+  position: relative;
+  display: block;
+  top: 3rem;
+  color: #34343b;
+}
+
+footer > p {
+  margin-top: 15rem;
+  color: #34343b;
+  font-weight: 600;
+  font-size: 2.75rem;
+  text-align: center;
+}
