@@ -88,7 +88,7 @@ const runClock = () => {
   const setTime = () => {
     
     const timeUnits = [];
-    timeUnits.push(date.toLocaleTimeString().split(/:| /));
+    timeUnits.push(date.toLocaleTimeString('en-US', { hour: 'numeric',  minute: 'numeric', second: 'numeric', hour12: true }).split(/:| /));
 
     const hr = () => {
     return timeUnits[0][0] < 10 
