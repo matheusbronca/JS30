@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490.947" height="505.262" viewBox="0 0 490.947 505.262">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #304674;
+      }
+
+      .cls-2 {
+        font-size: 28px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: Montserrat-SemiBold, Montserrat;
+        font-weight: 600;
+      }
+
+      .cls-3 {
+        font-size: 26px;
+      }
+    </style>
+  </defs>
+  <g id="Group_7" data-name="Group 7" transform="translate(-200.751 -319.282)">
+    <g id="Group_3" data-name="Group 3" transform="translate(321.532 361.771)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-1" width="2.539" height="23.34" transform="translate(0 1.27) rotate(-30)"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-1" width="2.539" height="23.34" transform="translate(236.631 411.126) rotate(-30)"/>
+    </g>
+    <g id="Group_4" data-name="Group 4" transform="translate(231.112 452.191)">
+      <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-1" width="2.539" height="23.34" transform="translate(0 2.199) rotate(-60)"/>
+      <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-1" width="2.539" height="23.34" transform="translate(409.856 238.83) rotate(-60)"/>
+    </g>
+    <g id="Group_5" data-name="Group 5" transform="translate(231.112 452.191)">
+      <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-1" width="2.539" height="23.34" transform="translate(1.27 250.5) rotate(-120)"/>
+      <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-1" width="2.539" height="23.34" transform="translate(411.126 13.869) rotate(-120)"/>
+    </g>
+    <g id="Group_6" data-name="Group 6" transform="translate(321.532 361.772)">
+      <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-1" width="2.539" height="23.34" transform="translate(2.199 431.339) rotate(-150)"/>
+      <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-1" width="2.539" height="23.34" transform="translate(238.83 21.483) rotate(-150)"/>
+    </g>
+    <text id="_12" data-name="12" class="cls-2" transform="translate(432.399 346.282)"><tspan x="0" y="0">12</tspan></text>
+    <text id="_6" data-name="6" class="cls-3" transform="translate(437.381 817.544)"><tspan x="0" y="0">6</tspan></text>
+    <text id="_3" data-name="3" class="cls-2" transform="translate(674.698 582.912)"><tspan x="0" y="0">3</tspan></text>
+    <text id="_9" data-name="9" class="cls-3" transform="translate(200.751 580.913)"><tspan x="0" y="0">9</tspan></text>
+  </g>
+</svg>
