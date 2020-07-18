@@ -93,7 +93,6 @@ const runClock = () => {
     const hr = timeUnits[0][0];
     const mn = timeUnits[0][1];
     const period = timeUnits[0][timeUnits[0].length -1];
-    console.log(hr);
     
     timeLabel.innerHTML = `${hr}:${mn}<span class="time-period">${period}<span>`;
   };
@@ -104,7 +103,6 @@ const runClock = () => {
     handles.forEach((handle) => {
       if (handle.style.transform == 'translate(-50%, -100%) rotate(354deg)') {
         handle.classList.add('disable-css-transitions');
-        console.log(handle);
       } else {
         secHandle.style.transform = `translate(-50%, -100%) rotate(${
           (date.getSeconds() / 60) * 360
