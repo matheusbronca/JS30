@@ -90,11 +90,16 @@ const runClock = () => {
     const timeUnits = [];
     timeUnits.push(date.toLocaleTimeString().split(/:| /));
 
-    const hr = timeUnits[0][0];
+    const hr = () => {
+    return timeUnits[0][0] < 10 
+    ? `0${timeUnits[0][0]}`
+    : timeUnits[0][0];
+  }
+
     const mn = timeUnits[0][1];
     const period = timeUnits[0][timeUnits[0].length -1];
     
-    timeLabel.innerHTML = `${hr}:${mn}<span class="time-period">${period}<span>`;
+    timeLabel.innerHTML = `${hr()}:${mn}<span class="time-period">${period}<span>`;
   };
 
   const setHandles = () => {
