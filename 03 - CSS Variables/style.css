@@ -1,0 +1,147 @@
+:root {
+  --primaryColor: #1a1a1a;
+  --secondaryColor: #0f0f0f;
+  --accentColor: #fbc000;
+  --fontColor: white; 
+
+  --borderColor: #fbc000;
+  --border: 0px;
+  --grayscale: 0;
+  --blur: 0px;
+}
+/*
+      misc styles, nothing to do with CSS variables
+    */
+
+body,
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+body::after {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  content: '';
+  background: url('./img/photo.jpg');
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.1);
+  filter: blur(10px) brightness(0.4);
+  z-index: -1;
+}
+
+.title,
+.sub {
+  color: var(--fontColor);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title {
+  color: var(--accentColor);
+  font-size: min(max(1.5rem, 5vw), 3rem);
+  font-family: 'Roboto', sans-serif;
+}
+
+.sub {
+  margin-top: -1em;
+  font-size: min(max(1rem, 2.5vw), 2rem);
+  font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2em;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 .5rem 3rem rgba(0, 0, 0, .6);
+}
+
+img {
+  margin-bottom: -.25rem;
+  width: 100%;
+  border-radius: 1rem;
+  filter: blur(var(--blur)) grayscale(var(--grayscale));
+}
+
+.border {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  box-shadow: inset 0 0 0 var(--border) var(--borderColor);
+  border-radius: 1rem;
+}
+
+.container {
+  width: 52.5vw;
+  color: var(--fontColor);
+  border-radius: 30px;
+}
+
+.controls {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.control {
+  width: 100%;
+}
+
+.control:not(:first-child) {
+  margin-left: 4em;
+}
+
+.controls input[type='range'] {
+  display: block;
+  width: 100%;
+}
+
+.controls label {
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 780px) {
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .control:not(:first-child) {
+    margin-top: 2em;
+  }
+
+  .container {
+    width: 80%;
+  }
+}
