@@ -2,7 +2,7 @@
   --primaryColor: #1a1a1a;
   --secondaryColor: #0f0f0f;
   --accentColor: #fbc000;
-  --fontColor: white; 
+  --fontColor: white;
 
   --borderColor: #fbc000;
   --border: 0px;
@@ -75,11 +75,11 @@ body::after {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 .5rem 3rem rgba(0, 0, 0, .6);
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.6);
 }
 
 img {
-  margin-bottom: -.25rem;
+  margin-bottom: -0.25rem;
   width: 100%;
   border-radius: 1rem;
   filter: blur(var(--blur)) grayscale(var(--grayscale));
@@ -96,7 +96,7 @@ img {
 }
 
 .container {
-  width: 52.5vw;
+  width: 50%;
   color: var(--fontColor);
   border-radius: 30px;
 }
