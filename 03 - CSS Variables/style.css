@@ -131,7 +131,7 @@ img {
   margin-left: 0.5rem;
 }
 
-@media screen and (max-width: 780px) {
+@media (max-width: 780px) {
   .controls {
     display: flex;
     flex-direction: column;
