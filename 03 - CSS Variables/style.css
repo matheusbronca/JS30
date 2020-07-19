@@ -31,6 +31,7 @@ body {
 }
 
 body::after {
+  display: none;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -42,8 +43,9 @@ body::after {
   content: '';
   background: url('./img/photo.jpg');
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
-  transform: scale(1.1);
+  transform: scale(1.3);
   filter: blur(10px) brightness(0.4);
   z-index: -1;
 }
