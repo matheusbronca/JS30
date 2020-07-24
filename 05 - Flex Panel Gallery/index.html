@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Panels 💪</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <style>
+    html {
+      box-sizing: border-box;
+      background: black;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 200;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .panels {
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      filter: grayscale(1);
+      cursor: pointer;
+    }
+
+    .panel {
+      background: #6B0F9C;
+      color: white;
+      text-align: center;
+      align-items: center;
+      /* Safari transitionend event.propertyName === flex */
+      /* Chrome + FF transitionend event.propertyName === flex-grow */
+      transition:
+        font-size 0.7s cubic-bezier(0.23, 1, 0.320, 1),
+        flex 0.7s cubic-bezier(0.23, 1, 0.320, 1),
+        background-color 0.7s cubic-bezier(0.23, 1, 0.320, 1);
+      font-size: 20px;
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .panel:hover {
+      filter: sepia(1);
+    }
+
+    .panel1 {
+      background-image: url('./img/01.jpg');
+    }
+
+    .panel2 {
+      background-image: url('./img/02.jpg');
+    }
+
+    .panel3 {
+      background-image: url('./img/03.jpg');
+    }
+
+    .panel4 {
+      background-image: url('./img/04.jpg');
+    }
+
+    /* Flex Children */
+    .panel>* {
+      margin: 0;
+      width: 100%;
+      transition: transform 0.5s;
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel>*:first-child {
+      transform: translateY(-100%);
+    }
+
+    .panel.open-active>*:first-child {
+      transform: translateY(0);
+    }
+
+
+    .panel>*:last-child {
+      transform: translateY(100%);
+    }
+
+    .panel.open-active>*:last-child {
+      transform: translateY(0);
+    }
+
+    .panel p {
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      text-shadow: 0 0 100px rgba(0, 0, 0, 0.7), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 1.5em;
+    }
+
+    .panel p:nth-child(2) {
+      font-size: 4em;
+      font-weight: bold;
+    }
+
+    .panel.open {
+      font-size: 40px;
+      flex: 5;
+    }
+  </style>
+
+
+  <div class="panels">
+    <div class="panel panel1">
+      <p>Hey</p>
+      <p>Let's</p>
+      <p>Go</p>
+    </div>
+    <div class="panel panel2">
+      <p>Eat</p>
+      <p>Pay</p>
+      <p>Rest</p>
+    </div>
+    <div class="panel panel3">
+      <p>Get</p>
+      <p>The</p>
+      <p>Shape</p>
+    </div>
+    <div class="panel panel4">
+      <p>Make</p>
+      <p>Price</p>
+      <p>Worth</p>
+    </div>
+  </div>
+  </div>
+
+  <script>
+
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen() {
+      this.classList.toggle('open');
+    }
+
+    function toggleActive(e) {
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active')
+      }
+    }
+
+    panels.forEach(panel => panel.onclick = toggleOpen);
+    panels.forEach(panel => panel.ontransitionend = toggleActive);
+  </script>
+
+
+
+</body>
+
+</html>
