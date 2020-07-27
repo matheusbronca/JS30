@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type Ahead 👀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&family=Syncopate:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title"><span id="type">Type\</span> Ahead</h1>
+    <form class="search-form">
+      <div class="search">
+        <input type="text" class="search-input" placeholder="Search for a city or state in the United States">
+        <button>Search</button>
+      </div>
+      <ul class="suggestions"></ul>
+    </form>
+  </div>
+  <script>
+    const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+    const cities = [];
+    const searchInput = document.querySelector('.search-input');
+    const suggestions = document.querySelector('.suggestions');
+
+    fetch(endpoint)
+      .then(blob => blob.json())
+      .then(data => cities.push(...data));
+
+    const findMatches = (wordToMatch, cities) => {
+      return cities.filter(place => {
+        const regex = RegExp(wordToMatch, 'gi');
+
+        if (wordToMatch === '' || undefined) return;
+
+        return place.city.match(regex) || place.state.match(regex);
+      })
+    }
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function displayMatches() {
+      const matchArray = findMatches(this.value, cities);
+      const html = matchArray.map(place => {
+        const regex = RegExp(this.value, 'gi');
+        const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`)
+        const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`)
+
+        if (this.length === 0) {
+          return '';
+        }
+        return `
+        <li class="suggestion"><span class="region-label">${cityName}, ${stateName}</span>
+         <span class="population-label">Population ${numberWithCommas(place.population)}</span>
+        </li>
+        `
+      }).join('');
+
+      suggestions.innerHTML = html;
+    }
+
+    function setInput(e) {
+      const suggestion = e.target.closest('.suggestion');
+      searchInput.value = suggestion.firstChild.innerText;
+    }
+
+    suggestions.onmousedown = setInput
+    searchInput.onchange = displayMatches
+    searchInput.onkeyup = displayMatches
+
+  </script>
+</body>
+
+</html>
