@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Fun with HTML Canvas</title>
+</head>
+
+<body>
+    <cursor>
+        <handler></handler>
+    </cursor>
+    <canvas id="canvas">
+    </canvas>
+    <div class="row">
+        <div class="tools">
+            <ul id="tools__list" class="tools__list">
+                <li id="brush" class="tools__item brush isActive">
+                    <div class="tooltip tool__size">
+                        <input type="range" orient="vertical" min="1" name="brush__slider" id="brush__slider">
+                    </div>
+                </li>
+                <li id="pencil" class="tools__item pencil">
+                    <div class="tooltip tool__size">
+                        <input type="range" orient="vertical" name="pencil__slider" id="pencil__slider">
+                    </div>
+                </li>
+                <li id="eraser" class="tools__item eraser">
+                    <div class="tooltip tool__size">
+                        <input type="range" orient="vertical" name="eraser__slider" id="eraser__slider">
+                    </div>
+                </li>
+                <li id="color" class="tools__item color">
+                    <ul class="tooltip">
+                        <li class="color__item color--yellow"></li>
+                        <li class="color__item color--orange"></li>
+                        <li class="color__item color--red"></li>
+                        <li class="color__item color--pink"></li>
+                        <li class="color__item color--purple"></li>
+                        <li class="color__item color--blue"></li>
+                        <li class="color__item color--cyan"></li>
+                        <li class="color__item color--green"></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tools__powermode">
+                <p class="tools__powermode__label">Power Mode On</p>
+                <div id="powermode" class="powermode__btn"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

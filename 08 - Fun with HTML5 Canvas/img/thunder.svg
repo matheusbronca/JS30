@@ -1,0 +1,11 @@
+<svg id="thunder" xmlns="http://www.w3.org/2000/svg" width="28.27" height="28.27" viewBox="0 0 28.27 28.27">
+  <g id="Component_5_1" data-name="Component 5 – 1">
+    <g id="Group_4" data-name="Group 4">
+      <path id="Path_4" data-name="Path 4" d="M118.361,11.3H108.54L109.393.974c.08-.963-1.765-1.35-2.466-.52L94.136,15.578c-.519.614.119,1.389,1.143,1.389H105.1l-.853,10.327c-.08.963,1.762,1.353,2.466.52L119.5,12.69C120.023,12.076,119.385,11.3,118.361,11.3Z" transform="translate(-92.685 0.001)" fill="#fff"/>
+      <path id="Path_5" data-name="Path 5" d="M72.662,396.423l-1.6,1.6a.913.913,0,0,0,1.291,1.291l1.6-1.6a.913.913,0,0,0-1.291-1.291Z" transform="translate(-70.795 -374.22)" fill="#fff"/>
+      <path id="Path_6" data-name="Path 6" d="M72.662,71.743a.913.913,0,0,0,1.291-1.291l-1.6-1.6a.913.913,0,0,0-1.291,1.291Z" transform="translate(-70.795 -64.834)" fill="#fff"/>
+      <path id="Path_7" data-name="Path 7" d="M380.118,396.423a.913.913,0,1,0-1.291,1.291l1.6,1.6a.913.913,0,0,0,1.291-1.291Z" transform="translate(-353.715 -374.221)" fill="#fff"/>
+      <path id="Path_8" data-name="Path 8" d="M380.118,71.742l1.6-1.6a.913.913,0,0,0-1.291-1.291l-1.6,1.6a.913.913,0,0,0,1.291,1.291Z" transform="translate(-353.716 -64.834)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
