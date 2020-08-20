@@ -38,7 +38,7 @@ $canvas.addEventListener('mousemove', (e) => {
 
   if (
     cursorPosition.positionX >= 0 &&
-    cursorPosition.positionX <= $canvas.width
+    cursorPosition.positionX <= $canvas.width  
   ) {
     if (
       cursorPosition.positionY >= 0 &&
