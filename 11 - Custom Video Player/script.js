@@ -1,6 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+const $body = $('body');
 const $player = $('.player');
 const $video = $('.viewer');
 const $progress = $('.progress');
@@ -49,3 +50,6 @@ $progress.onmousemove = (e) => mousedown && scrub(e);
 
 $skipButtons.forEach((button) => (button.onclick = skip));
 $ranges.forEach((range) => (range.oninput = handleRangeUpdate));
+
+// PREVENT MOBILE SCROLLING;
+$body.ontouchend = (e) => e.preventDefault();
