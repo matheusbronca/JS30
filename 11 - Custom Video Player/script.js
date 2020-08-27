@@ -3,6 +3,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 const $body = $('body');
 const $player = $('.player');
+const $playerBtn = $('.player__btn');
 const $video = $('.viewer');
 const $progress = $('.progress');
 const $progressBar = $('.progress__filled');
@@ -11,7 +12,10 @@ const $toggle = $('.toggle');
 const $skipButtons = $$('[data-skip]');
 const $ranges = $$('.player__slider');
 
-const togglePlay = () => ($video.paused ? $video.play() : $video.pause());
+const togglePlay = () => {
+  $playerBtn.classList.toggle('player--isPaused');
+  $video.paused ? $video.play() : $video.pause();
+};
 
 const updateIcon = () =>
   $video.paused ? ($toggle.textContent = '►') : ($toggle.textContent = '❚ ❚');
@@ -37,14 +41,15 @@ function scrub(e) {
 
 // Hook up the event listeners
 let mousedown = false;
-$progress.onmousedown = () => mousedown = true;
-$progress.onmouseup = () => mousedown = false;
+$progress.onmousedown = () => (mousedown = true);
+$progress.onmouseup = () => (mousedown = false);
 
 $video.onclick = togglePlay;
 $toggle.onclick = togglePlay;
 $video.onplay = updateIcon;
 $video.onpause = updateIcon;
 $video.ontimeupdate = handleProgress;
+$playerBtn.onclick = togglePlay;
 $progress.onclick = scrub;
 $progress.onmousemove = (e) => mousedown && scrub(e);
 
@@ -52,4 +57,4 @@ $skipButtons.forEach((button) => (button.onclick = skip));
 $ranges.forEach((range) => (range.oninput = handleRangeUpdate));
 
 // PREVENT MOBILE SCROLLING;
-$body.ontouchend = (e) => e.preventDefault();
+window.onload = () => $video.currentTime = 1.5;
