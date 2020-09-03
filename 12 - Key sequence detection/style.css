@@ -1,0 +1,49 @@
+ 
+ *, *::after, *::before {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ video {
+     position: fixed;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     min-width: 120%;
+     min-height: 120%;
+
+ }
+
+ body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     position: fixed;
+     height: 100%;
+     width: 100%;
+     background-color: black;
+ }
+
+ h1 {
+     font-family: 'East Sea Dokdo', cursive;
+     font-weight: 100;
+     margin: 0 2rem;
+     text-align: center;
+     color: white;
+     font-size: 4rem;
+ }
+
+ img {  
+    width: 50%;
+    max-width: 250px;
+    position: relative;
+    margin: 0 auto 4rem auto;
+ }
+
+ @media screen and (max-width: 767px) {
+     h1 {
+         font-size: 3rem;
+     }
+ }
