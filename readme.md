@@ -1,4 +1,4 @@
-# Landing page Doritos
+# JS30 ENHANCED
 
  A JS30 Challenge Repo but with enhanced challenges.
  Although the original name repo refers to 30 days to develop the challenges, due to the improvements, this project does not follow the standard deadline, with no day limit for the development of the improvements. 
@@ -8,11 +8,11 @@
 ## Demo
  [Click here to see a demo](https://matheusbronca.github.io/JS30/)
 
-## Tecnologias
+## Technologies
 
 [VanillaJS](https://www.javascript.com/)
 
-# Contribuidores
+# Contributors
 
 <table>
   <tr>
