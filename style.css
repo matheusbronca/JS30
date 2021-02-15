@@ -133,3 +133,68 @@ h1 .logo {
     color: white;
     transition: opacity .1s ease-in;
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .project {
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .container{
+        width: 90%;
+    }
+
+    h1 .logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .title span:nth-child(1) {
+    font-size: 1rem;
+ }
+
+.title span:nth-child(2) {
+    font-size: 2rem;
+}
+
+    .projects-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .github__img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        flex-direction: column;
+    }
+
+        h1 .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+
+
+        .title span:nth-child(1) {
+    font-size: .875rem;
+ }
+
+    .title span:nth-child(2) {
+    font-size: 1.8rem;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+    }
+}
