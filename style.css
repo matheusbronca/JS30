@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #F7DF1E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+}
+
+h1 .logo {
+    width: 150px;
+    height: 150px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    text-transform: uppercase; 
+    padding: 2rem 2rem;
+}
+
+.title span:nth-child(1) {
+    font-weight: normal;
+    font-size: 1.70rem;
+ }
+
+.title span:nth-child(2) {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.github__img {
+    margin-right: 1rem;
+    width: 2.5rem;
+}
+
+.github-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-list {
+    margin: 2.5rem 0;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project {
+    position: relative;
+    height: 350px;
+    border: 2px solid var(--primary-color);
+}
+
+.project a > img {
+    height: 87.5%;
+    width: 100%;
+    padding: 1rem;
+    object-fit: cover;
+}
+
+.project a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.project .card__title {
+    position: absolute;
+    padding: .75rem;
+    left: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: black;
+}
+
+.project a:hover::after {
+    opacity: 1;
+}
+
+.project a:after {
+    opacity: 0;
+    content: 'see project';
+    line-height: 325px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F7DF1E90;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    transition: opacity .1s ease-in;
+}
